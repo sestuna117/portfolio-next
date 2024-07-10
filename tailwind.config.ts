@@ -19,8 +19,14 @@ const config: Config = {
         'pastel-green': '#9ee478',
         'atlantis': '#78D24A'
       },
+      transitionProperty: {
+        'background-size': 'background-size'
+      },
       transitionDuration: {
         '400': '400ms',
+      },
+      transitionTimingFunction: {
+        'slow-wipe': 'cubic-bezier(0.98, 0.01, 0.15, 0.98)'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -32,11 +38,12 @@ const config: Config = {
   plugins: [
     plugin(function({ addUtilities, matchUtilities, addComponents, e, config }) {
       matchUtilities({
-        '.text-stroke': (value) => ({
+        'text-stroke': (value) => ({
           '-webkit-text-stroke-width': `${value}px`,
         }),
-        '.content-value': (value) => ({
-          'content': `${value} !important`
+        'background-size-width': (value) => ({
+          '-webkit-background-size': `${value} 100%`,
+          'background-size': `${value} 100%`,
         })
       })
       addUtilities({
@@ -46,22 +53,11 @@ const config: Config = {
           '-webkit-text-stroke': '2px black'
         },
         '.wipe': {
-          'position': 'absolute',
-          'top': '0',
-          'left': '0',
           'background-image': 'linear-gradient(123deg, white 0%, white 50%, transparent 50.1%)',
-          '-webkit-background-size': '0 100%',
-          'background-size': '0 100%',
           '-webkit-text-fill-color': 'transparent',
           '-webkit-background-clip': 'text',
           'background-repeat': 'no-repeat',
-          '-webkit-transition': 'background-size 0.5s cubic-bezier(0.98, 0.01, 0.15, 0.98)', // this is the animation, background size updated
         },
-        '.wipe-full': {
-          '-webkit-background-size': '220% 100%',
-          'background-size': '220% 100%',
-        }
-
       })
     }),
   ],
