@@ -12,6 +12,9 @@ const config: Config = {
       'xxl': ['15rem', '15rem']
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-gunterz)']
+      },
       colors: {
         'alto': '#dcdcdc',
         'heavy-metal': '#2c2e2b',
@@ -49,9 +52,9 @@ const config: Config = {
       })
       addUtilities({
         '.hollow-text': {
-          'color': 'alto',
-          'text-stroke': '2px black',
-          '-webkit-text-stroke': '2px black'
+          'color': 'transparent',
+          'text-stroke': '4px black',
+          '-webkit-text-stroke': '4px black'
         },
         '.wipe': {
           'background-image': 'linear-gradient(123deg, white 0%, white 50%, transparent 50.1%)',
