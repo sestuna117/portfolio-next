@@ -17,7 +17,8 @@ const config: Config = {
         'heavy-metal': '#2c2e2b',
         'cod-gray': '#121212',
         'pastel-green': '#9ee478',
-        'atlantis': '#78D24A'
+        'atlantis': '#78D24A',
+        'malachite': '#12d52c',
       },
       transitionProperty: {
         'background-size': 'background-size'
