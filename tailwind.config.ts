@@ -9,7 +9,7 @@ const config: Config = {
   ],
   theme: {
     fontSize: {
-      'xxl': ['15rem', '15rem']
+      'xxl': ['15rem', '16.5rem']
     },
     extend: {
       fontFamily: {
@@ -40,7 +40,7 @@ const config: Config = {
     },
   },
   plugins: [
-    plugin(function({ addUtilities, matchUtilities, addComponents, e, config }) {
+    plugin(function({ addUtilities, matchUtilities, addComponents, e, theme }) {
       matchUtilities({
         'text-stroke': (value) => ({
           '-webkit-text-stroke-width': `${value}px`,
@@ -57,11 +57,30 @@ const config: Config = {
           '-webkit-text-stroke': '4px black'
         },
         '.wipe': {
-          'background-image': 'linear-gradient(123deg, white 0%, white 50%, transparent 50.1%)',
+          'background-image': `linear-gradient(123deg, ${theme('colors.alto')} 0%, white 50%, transparent 50.1%)`,
           '-webkit-text-fill-color': 'transparent',
           '-webkit-background-clip': 'text',
           'background-repeat': 'no-repeat',
         },
+
+      })
+      addComponents({
+        '.wiper': {
+          'content': '""',
+          'height': '50vh',
+          'width': '100vw',
+          'position': 'fixed',
+          'left': '0',
+          'z-index': '1',
+          'background': theme('colors.alto'),
+          'transition': 'all 0.5s ease-in-out'
+        },
+        '.wiper-on-b': {
+          'transform': 'translateY(0) !important'
+        },
+        '.wiper-on-a': {
+          'transform': 'translateY(-100%) !important'
+        }
       })
     }),
   ],

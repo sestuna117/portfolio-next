@@ -19,7 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${gunterz.variable} font-sans`}>
-      <body>{children}</body>
+      <body
+          className={`after:wiper after:translate-y-full 
+           before:wiper before:-translate-y-full 
+           *:w-screen *:h-screen
+           `}
+      >
+      {children}</body>
     </html>
   );
 }
