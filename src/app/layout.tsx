@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import "./globals.css";
+import {PageTextBorder} from "@/app/_components/PageTextBorder";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,14 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${gunterz.variable} font-sans`}>
+    <html lang="en" className={`${gunterz.variable} font-gunterz`}>
       <body
           className={`after:wiper after:translate-y-full 
            before:wiper before:-translate-y-full 
-           *:w-screen *:h-screen
+           *:h-screen
            `}
       >
-      {children}</body>
+      {children}
+      </body>
     </html>
   );
 }

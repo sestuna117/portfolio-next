@@ -8,12 +8,18 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontSize: {
-      'xxl': ['15rem', '16.5rem']
-    },
     extend: {
+      width: {
+        '100vh': '100vh',
+      },
+      height: {
+        '100vw': '100vw',
+      },
+      fontSize: {
+        'xxl': ['15rem', '16.25rem']
+      },
       fontFamily: {
-        sans: ['var(--font-gunterz)']
+        gunterz: ['var(--font-gunterz)']
       },
       colors: {
         'alto': '#dcdcdc',
