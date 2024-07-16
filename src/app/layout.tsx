@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { PageTextBorder } from "@/app/_components/PageTextBorder";
-import { useState } from "react";
+import { DesignModalButton } from "@/app/_components/DesignModalButton";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,17 +18,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [showDesignModal, setShowDesignModal] = useState(false);
-
   return (
     <html lang="en" className={`${gunterz.variable} font-gunterz`}>
       <body
         className={`after:wiper after:translate-y-full 
-           before:wiper before:-translate-y-full 
-           *:h-screen
-           `}
+          before:wiper before:-translate-y-full
+          `}
       >
         {children}
+        <DesignModalButton />
       </body>
     </html>
   );

@@ -10,10 +10,10 @@ export const PageTextBorder = (props: PageTextBorderProps) => {
   return (
     <>
       <div
-        className={`fixed left-0 transform -rotate-90 font-sans font-semibold text-sm w-100vh `}
+        className={`h-screen fixed left-0 transform -rotate-90 font-sans font-semibold text-sm w-100vh text-cod-gray`}
       >
         <div
-          className={"w-full absolute flex flex-row justify-between py-2 px-10"}
+          className={"w-full absolute flex flex-row justify-between py-4 px-10"}
         >
           {texts.map((text, index) => (
             <div key={`border-text-left-${index}`}>{text}</div>
@@ -21,10 +21,10 @@ export const PageTextBorder = (props: PageTextBorderProps) => {
         </div>
       </div>
       <div
-        className={`fixed right-0 transform rotate-90 font-sans font-semibold text-sm w-100vh `}
+        className={`h-screen fixed right-0 transform rotate-90 font-sans font-semibold text-sm w-100vh text-heavy-metal`}
       >
         <div
-          className={"w-full absolute flex flex-row justify-between py-2 px-10"}
+          className={"w-full absolute flex flex-row justify-between py-4 px-10"}
         >
           {texts.map((text, index) => (
             <div key={`border-text-right-${index}`}>{text}</div>
