@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
 import "./globals.css";
-import {PageTextBorder} from "@/app/_components/PageTextBorder";
+import { PageTextBorder } from "@/app/_components/PageTextBorder";
+import { useState } from "react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -9,24 +10,26 @@ export const metadata: Metadata = {
 };
 
 const gunterz = localFont({
-  src: '../../public/fonts/Gunterz-Medium.otf',
-  variable: '--font-gunterz'
-})
+  src: "../../public/fonts/Gunterz-Medium.otf",
+  variable: "--font-gunterz",
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [showDesignModal, setShowDesignModal] = useState(false);
+
   return (
     <html lang="en" className={`${gunterz.variable} font-gunterz`}>
       <body
-          className={`after:wiper after:translate-y-full 
+        className={`after:wiper after:translate-y-full 
            before:wiper before:-translate-y-full 
            *:h-screen
            `}
       >
-      {children}
+        {children}
       </body>
     </html>
   );
