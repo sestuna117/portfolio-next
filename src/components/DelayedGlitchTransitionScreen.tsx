@@ -1,6 +1,7 @@
-'use client'
+"use client";
 import { GlitchText } from "@/components/GlitchText";
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
+import { sleep } from "@/utils";
 
 interface DelayedGlitchTransitionScreenProps {
   text: string;
@@ -11,22 +12,34 @@ interface DelayedGlitchTransitionScreenProps {
 export const DelayedGlitchTransitionScreen = (
   props: DelayedGlitchTransitionScreenProps,
 ) => {
-  const { text, children, delay = 500 } = props;
+  const { text, children, delay = 500} = props;
   const [displayContent, setDisplayContent] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const delayAndWipe = async () => {
+      await sleep(delay);
+      const blackWipe = document.getElementById("black-bar-transition");
+      const glitchText = document.getElementById("glitch-text");
+      blackWipe?.classList.add("before:animate-bouncy-slide-down");
+      // glitchText?.classList.add("before:animate-bouncy-slide-down");
+      await sleep(1200);
       setDisplayContent(true);
-    }, delay);
-    return () => clearTimeout(timer);
-  },[delay])
+    };
+    delayAndWipe();
+  }, [delay]);
 
-  return displayContent ? children : (
+  return displayContent ? (
+    children
+  ) : (
     <div
-      className={`fixed top-0 left-0 w-screen h-screen font-sans text-alto bg-black-bars-vertical`}
+      className={`fixed top-0 left-0 w-screen h-screen font-sans text-alto bg-black-bars-vertical before:w-screen before:h-screen before:content-[''] before:absolute before:-top-full before:bg-black`}
       id={"black-bar-transition"}
     >
-      <div className={"w-full h-full animate-background-flicker bg-opacity-40 bg-black"}>
+      <div
+        className={
+          "w-full h-full animate-background-flicker bg-opacity-40 bg-black"
+        }
+      >
         <GlitchText text={text} />
         <svg
           className={"w-full h-full"}

@@ -2,6 +2,7 @@
 import Link, { LinkProps } from "next/link";
 import React from "react";
 import { useRouter } from "next/navigation";
+import { sleep } from "@/utils";
 
 interface HomeLinkProps extends LinkProps {
   label: string;
@@ -11,10 +12,6 @@ interface HomeLinkProps extends LinkProps {
 export const HomeLink = (props: HomeLinkProps) => {
   const router = useRouter();
   const { href, label } = props;
-
-  const sleep = async (ms: number): Promise<unknown> => {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  };
 
   const handleClick = async (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,

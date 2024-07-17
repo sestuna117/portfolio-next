@@ -52,6 +52,7 @@ const config: Config = {
           "glitch-movement 10s step-end infinite, glitch-clip 5s step-end infinite, glitch-opacity 5s step-end infinite, glitch-font 7s step-end infinite",
         "glitch-clip": "glitch-clip 5s step-end infinite",
         "background-flicker": "background-flicker 0.5s step-end",
+        "bouncy-slide-down": "slide-down 1s cubic-bezier(.76,.21,.23,.8) forwards"
       },
       keyframes: {
         "grow-infinite": {
@@ -202,6 +203,17 @@ const config: Config = {
             "background-color": "transparent",
           },
         },
+        "slide-down": {
+          "0%": {
+            transform: "translateY(0)"
+          },
+          "10%": {
+            transform: "translateY(-10vh)"
+          },
+          "100%": {
+            transform: "translateY(100vh)"
+          }
+        }
       },
     },
   },

@@ -20,3 +20,7 @@ export const generateRandomClipPaths = () => {
   console.log(`clip-path: polygon(${points});`);
   return `clip-path: polygon(${points})`
 }
+
+export const sleep = async (ms: number): Promise<unknown> => {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
