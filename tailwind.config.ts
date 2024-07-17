@@ -46,9 +46,12 @@ const config: Config = {
       },
       animation: {
         "grow-infinite": "grow-infinite 12s infinite",
-        "glitch-flicker-1": "glitch-movement 8s step-end infinite, glitch-clip 5s step-end infinite, glitch-opacity 5s step-end infinite, glitch-font 8s step-end infinite",
-        "glitch-flicker-2": "glitch-movement 10s step-end infinite, glitch-clip 5s step-end infinite, glitch-opacity 5s step-end infinite, glitch-font 7s step-end infinite",
+        "glitch-flicker-1":
+          "glitch-movement 8s step-end infinite, glitch-clip 5s step-end infinite, glitch-opacity 5s step-end infinite, glitch-font 8s step-end infinite",
+        "glitch-flicker-2":
+          "glitch-movement 10s step-end infinite, glitch-clip 5s step-end infinite, glitch-opacity 5s step-end infinite, glitch-font 7s step-end infinite",
         "glitch-clip": "glitch-clip 5s step-end infinite",
+        "background-flicker": "background-flicker 0.5s step-end",
       },
       keyframes: {
         "grow-infinite": {
@@ -122,23 +125,23 @@ const config: Config = {
         "glitch-font": {
           "0%": {
             "font-weight": "100",
-            "filter": "blur(3px)",
+            filter: "blur(3px)",
           },
           "20%": {
             "font-weight": "500",
-            "filter": "blur(0)",
+            filter: "blur(0)",
           },
           "50%": {
             "font-weight": "300",
-            "filter": "blur(2px)",
+            filter: "blur(2px)",
           },
           "60%": {
             "font-weight": "700",
-            "filter": "blur(0)",
+            filter: "blur(0)",
           },
           "90%": {
             "font-weight": "500",
-            "filter": "blur(6px)",
+            filter: "blur(6px)",
           },
         },
         "glitch-clip": {
@@ -183,6 +186,20 @@ const config: Config = {
           },
           "93%": {
             "clip-path": "none",
+          },
+        },
+        "background-flicker": {
+          "0%": {
+            "background-color": "white",
+          },
+          "10%": {
+            "background-color": "transparent",
+          },
+          "12%": {
+            "background-color": "white",
+          },
+          "30%": {
+            "background-color": "transparent",
           },
         },
       },

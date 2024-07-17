@@ -12,7 +12,7 @@ export const DesignModal = (props: DesignModalProps) => {
 
   return (
     isOpen && (
-      <DelayedGlitchTransitionScreen text={"Display"} delay={5000}>
+      <DelayedGlitchTransitionScreen text={"Design"} delay={5000}>
         <div
           className={`fixed top-0 left-0 w-screen h-screen p-10 font-sans bg-black text-alto`}
           id={"designModal"}

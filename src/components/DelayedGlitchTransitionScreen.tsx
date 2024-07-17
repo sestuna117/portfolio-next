@@ -23,9 +23,10 @@ export const DelayedGlitchTransitionScreen = (
 
   return displayContent ? children : (
     <div
-      className={`fixed top-0 left-0 w-screen h-screen font-sans bg-opacity-50 text-alto bg-black-bars-vertical`}
+      className={`fixed top-0 left-0 w-screen h-screen font-sans text-alto bg-black-bars-vertical`}
+      id={"black-bar-transition"}
     >
-      <div className={"w-full h-full bg-opacity-40 bg-black"}>
+      <div className={"w-full h-full animate-background-flicker bg-opacity-40 bg-black"}>
         <GlitchText text={text} />
         <svg
           className={"w-full h-full"}
