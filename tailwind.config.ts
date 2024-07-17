@@ -45,7 +45,7 @@ const config: Config = {
           "-webkit-linear-gradient(left, black, black 10%, transparent 10%, transparent 90%, black 90%)",
       },
       animation: {
-        "grow-infinite": "grow-infinite 30s infinite",
+        "grow-infinite": "grow-infinite 12s infinite",
         "glitch-flicker-1": "glitch-movement 8s step-end infinite, glitch-clip 5s step-end infinite, glitch-opacity 5s step-end infinite, glitch-font 8s step-end infinite",
         "glitch-flicker-2": "glitch-movement 10s step-end infinite, glitch-clip 5s step-end infinite, glitch-opacity 5s step-end infinite, glitch-font 7s step-end infinite",
         "glitch-clip": "glitch-clip 5s step-end infinite",
@@ -62,7 +62,7 @@ const config: Config = {
         "glitch-movement": {
           "0%": {
             top: "0px",
-            left: "-15x",
+            left: "-20x",
           },
           "15%": {
             top: "10px",
@@ -74,7 +74,7 @@ const config: Config = {
           },
           "75%": {
             top: "-5px",
-            left: "5px",
+            left: "20px",
           },
           "100%": {
             top: "10px",
