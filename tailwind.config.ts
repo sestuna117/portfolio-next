@@ -39,9 +39,23 @@ const config: Config = {
         "slow-wipe": "cubic-bezier(0.98, 0.01, 0.15, 0.98)",
       },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "black-bars-vertical":
+          "-webkit-linear-gradient(black, black 15%, transparent 15%, transparent 85%, black 85%)",
+        "black-bars-horizontal":
+          "-webkit-linear-gradient(left, black, black 10%, transparent 10%, transparent 90%, black 90%)",
+      },
+      animation: {
+        "grow-infinite": "grow-infinite 30s infinite",
+      },
+      keyframes: {
+        "grow-infinite": {
+          "0%": {
+            transform: "scale(0)",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
+        },
       },
     },
   },
@@ -53,6 +67,18 @@ const config: Config = {
       e,
       theme,
     }) {
+      matchUtilities(
+        {
+          "animation-delay": (value) => {
+            return {
+              "animation-delay": value,
+            };
+          },
+        },
+        {
+          values: theme("transitionDelay"),
+        },
+      );
       matchUtilities({
         "text-stroke": (value) => ({
           "-webkit-text-stroke-width": `${value}px`,
