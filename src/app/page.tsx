@@ -1,6 +1,5 @@
 import { HomeLink } from "@/app/_components/HomeLink";
 import { PageTextBorder } from "@/components/PageTextBorder";
-import {DesignModalButton} from "@/app/_components/DesignModalButton";
 
 export default function Home() {
   return (

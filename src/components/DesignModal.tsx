@@ -1,4 +1,6 @@
 import React from "react";
+import { GlitchText } from "@/components/GlitchText";
+import {generateRandomClipPaths} from "@/utils";
 
 interface DesignModalProps {
   isOpen: boolean;
@@ -8,16 +10,14 @@ interface DesignModalProps {
 export const DesignModal = (props: DesignModalProps) => {
   const { isOpen, close } = props;
 
+  generateRandomClipPaths();
+
   return (
     <div
       className={`fixed top-0 left-0 w-screen h-screen font-sans bg-opacity-50 text-alto bg-black-bars-vertical`}
     >
       <div className={"w-full h-full bg-opacity-40 bg-black"}>
-        <div
-          className={`fixed font-gunterz italic text-9xl left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center`}
-        >
-          Design
-        </div>
+        <GlitchText text={"Design"} />
         <svg
           className={"w-full h-full"}
           xmlns="http://www.w3.org/2000/svg"

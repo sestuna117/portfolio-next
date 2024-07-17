@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { DesignModalButton } from "@/app/_components/DesignModalButton";
+import { DesignModalButton } from "@/components/DesignModalButton";
 
 export const metadata: Metadata = {
   title: "Create Next App",
