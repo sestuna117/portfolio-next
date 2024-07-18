@@ -52,7 +52,8 @@ const config: Config = {
           "glitch-movement 10s step-end infinite, glitch-clip 5s step-end infinite, glitch-opacity 5s step-end infinite, glitch-font 7s step-end infinite",
         "glitch-clip": "glitch-clip 5s step-end infinite",
         "background-flicker": "background-flicker 0.5s step-end",
-        "bouncy-slide-down": "slide-down 1s cubic-bezier(.76,.21,.23,.8) forwards"
+        "slide-down": "slide-down 1s cubic-bezier(.76,.21,.23,.8) forwards",
+        "flicker-away": "flicker-away 0.5s forwards",
       },
       keyframes: {
         "grow-infinite": {
@@ -205,25 +206,39 @@ const config: Config = {
         },
         "slide-down": {
           "0%": {
-            transform: "translateY(0)"
-          },
-          "10%": {
-            transform: "translateY(-10vh)"
+            transform: "translateY(0)",
           },
           "100%": {
-            transform: "translateY(100vh)"
-          }
-        }
+            transform: "translateY(100vh)",
+          },
+        },
+        "flicker-away": {
+          "0%": {
+            opacity: "1",
+          },
+          "10%": {
+            opacity: "0",
+          },
+          "20%": {
+            opacity: "1",
+          },
+          "60%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "0",
+          },
+        },
       },
     },
   },
   plugins: [
     plugin(function ({
+      theme,
       addUtilities,
       matchUtilities,
       addComponents,
-      e,
-      theme,
+      addVariant,
     }) {
       matchUtilities(
         {

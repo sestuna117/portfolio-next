@@ -1,5 +1,5 @@
 "use client";
-import { GlitchText } from "@/components/GlitchText";
+import { GlitchText } from "@/components/DesignModal/GlitchText";
 import React, { useEffect, useState } from "react";
 import { sleep } from "@/utils";
 
@@ -12,17 +12,15 @@ interface DelayedGlitchTransitionScreenProps {
 export const DelayedGlitchTransitionScreen = (
   props: DelayedGlitchTransitionScreenProps,
 ) => {
-  const { text, children, delay = 500} = props;
+  const { text, children, delay = 500 } = props;
   const [displayContent, setDisplayContent] = useState(false);
 
   useEffect(() => {
     const delayAndWipe = async () => {
       await sleep(delay);
       const blackWipe = document.getElementById("black-bar-transition");
-      const glitchText = document.getElementById("glitch-text");
-      blackWipe?.classList.add("before:animate-bouncy-slide-down");
-      // glitchText?.classList.add("before:animate-bouncy-slide-down");
-      await sleep(1200);
+      blackWipe?.classList.add("before:animate-slide-down");
+      await sleep(2000);
       setDisplayContent(true);
     };
     delayAndWipe();
@@ -40,7 +38,7 @@ export const DelayedGlitchTransitionScreen = (
           "w-full h-full animate-background-flicker bg-opacity-40 bg-black"
         }
       >
-        <GlitchText text={text} />
+        <GlitchText />
         <svg
           className={"w-full h-full"}
           xmlns="http://www.w3.org/2000/svg"

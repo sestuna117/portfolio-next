@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { DesignModal } from "@/components/DesignModal";
+import { DesignModal } from "@/components/DesignModal/DesignModal";
 
 export const DesignModalButton = () => {
   const [showModal, setShowModal] = useState(false);

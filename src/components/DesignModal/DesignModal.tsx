@@ -1,6 +1,6 @@
 import React from "react";
-import { GlitchText } from "@/components/GlitchText";
-import { DelayedGlitchTransitionScreen } from "@/components/DelayedGlitchTransitionScreen";
+import { GlitchText } from "@/components/DesignModal/GlitchText";
+import { DelayedGlitchTransitionScreen } from "@/components/DesignModal/DelayedGlitchTransitionScreen";
 
 interface DesignModalProps {
   isOpen: boolean;
