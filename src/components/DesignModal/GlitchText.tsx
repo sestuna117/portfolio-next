@@ -10,12 +10,12 @@ export const GlitchText = () => {
       after:content-[attr(data-text)] after:w-[110%] after:z-[-1] after:absolute after:top-[50px] after:left-[-10px] after:animate-glitch-flicker-2
     `}
     >
-      <span className={"animate-flicker-away animation-delay-[5.5s]"}>D</span>
-      <span className={"animate-flicker-away animation-delay-[6.5s]"}>E</span>
-      <span className={"animate-flicker-away animation-delay-[5.8s]"}>S</span>
-      <span className={"animate-flicker-away animation-delay-[6.5s]"}>I</span>
-      <span className={"animate-flicker-away animation-delay-[6s]"}>G</span>
-      <span className={"animate-flicker-away animation-delay-[5.7s]"}>N</span>
+      <span className={"animate-flicker-away animation-delay-[2.5s]"}>D</span>
+      <span className={"animate-flicker-away animation-delay-[3.5s]"}>E</span>
+      <span className={"animate-flicker-away animation-delay-[2.8s]"}>S</span>
+      <span className={"animate-flicker-away animation-delay-[3.5s]"}>I</span>
+      <span className={"animate-flicker-away animation-delay-[3s]"}>G</span>
+      <span className={"animate-flicker-away animation-delay-[2.7s]"}>N</span>
     </div>
   );
 };

@@ -12,11 +12,12 @@ export const DesignModal = (props: DesignModalProps) => {
 
   return (
     isOpen && (
-      <DelayedGlitchTransitionScreen text={"Design"} delay={5000}>
+      <DelayedGlitchTransitionScreen text={"Design"} delay={2000}>
         <div
-          className={`fixed top-0 left-0 w-screen h-screen p-10 font-sans bg-black text-alto`}
+          className={`fixed top-0 left-0 w-screen h-screen p-40 font-sans bg-black text-alto m-auto `}
           id={"designModal"}
         >
+          <div>Design </div>
           <button onClick={close}>X</button>
           <div className={""}>
             The design for this portfolio was inspired by{" "}

@@ -56,14 +56,14 @@ export const DelayedGlitchTransitionScreen = (
           />
           <circle
             className={
-              "animate-grow-infinite origin-center animation-delay-[3s]"
+              "animate-grow-infinite origin-center animation-delay-[1s]"
             }
             vectorEffect="non-scaling-stroke"
             cx="50%"
             cy="50%"
             r="96%"
             stroke="white"
-            strokeWidth="2"
+            strokeWidth="3"
             fill="none"
           />
         </svg>

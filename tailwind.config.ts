@@ -45,12 +45,12 @@ const config: Config = {
           "-webkit-linear-gradient(left, black, black 10%, transparent 10%, transparent 90%, black 90%)",
       },
       animation: {
-        "grow-infinite": "grow-infinite 12s infinite",
+        "grow-infinite": "grow-infinite 9s infinite",
         "glitch-flicker-1":
-          "glitch-movement 8s step-end infinite, glitch-clip 5s step-end infinite, glitch-opacity 5s step-end infinite, glitch-font 8s step-end infinite",
+          "glitch-movement 8s step-end infinite, glitch-clip 4s step-end infinite, glitch-opacity 4s step-end infinite, glitch-font 5s step-end infinite",
         "glitch-flicker-2":
-          "glitch-movement 10s step-end infinite, glitch-clip 5s step-end infinite, glitch-opacity 5s step-end infinite, glitch-font 7s step-end infinite",
-        "glitch-clip": "glitch-clip 5s step-end infinite",
+          "glitch-movement 10s step-end infinite, glitch-clip 4s step-end infinite, glitch-opacity 4s step-end infinite, glitch-font 6s step-end infinite",
+        "glitch-clip": "glitch-clip 3s step-end infinite",
         "background-flicker": "background-flicker 0.5s step-end",
         "slide-down": "slide-down 1s cubic-bezier(.76,.21,.23,.8) forwards",
         "flicker-away": "flicker-away 0.5s forwards",
