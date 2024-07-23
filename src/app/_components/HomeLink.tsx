@@ -34,7 +34,7 @@ export const HomeLink = (props: HomeLinkProps) => {
 
   return (
     <Link
-      className={`text-cod gray relative inline-block text-right font-bold text-xxl uppercase 
+      className={`text-white relative inline-block text-right font-bold text-xxl uppercase 
                  before:wipe before:content-[attr(id)] before:background-size-width-[0] before:inline-block before:text-right 
                  before:font-bold before:text-xxl before:uppercase before:absolute before:top-0 before:left-0 
                  before:transition-background-size before:ease-slow-wipe before:duration-500 hover:before:background-size-width-[220%]`}

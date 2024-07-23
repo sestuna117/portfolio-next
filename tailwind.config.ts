@@ -28,6 +28,8 @@ const config: Config = {
         "pastel-green": "#9ee478",
         atlantis: "#78D24A",
         malachite: "#12d52c",
+        heliotrope: "#a57ffb",
+        deluge: "#745ea8",
       },
       transitionProperty: {
         "background-size": "background-size",
@@ -193,15 +195,21 @@ const config: Config = {
         "background-flicker": {
           "0%": {
             "background-color": "white",
+            "background-image": "none",
           },
           "10%": {
-            "background-color": "transparent",
+            "background-image":
+              "-webkit-linear-gradient(black, black 15%, transparent 15%, transparent 85%, black 85%)",
+            "background-color": "rgba(0, 0, 0, 0.4)",
           },
           "12%": {
             "background-color": "white",
+            "background-image": "none",
           },
           "30%": {
-            "background-color": "transparent",
+            "background-image":
+              "-webkit-linear-gradient(black, black 15%, transparent 15%, transparent 85%, black 85%)",
+            "background-color": "rgba(0, 0, 0, 0.4)",
           },
         },
         "slide-down": {
@@ -283,7 +291,7 @@ const config: Config = {
           "-webkit-text-stroke": "4px black",
         },
         ".wipe": {
-          "background-image": `linear-gradient(123deg, ${theme("colors.alto")} 0%, white 50%, transparent 50.1%)`,
+          "background-image": `linear-gradient(123deg, ${theme("colors.deluge")} 0%, ${theme("colors.heliotrope")} 20%, transparent 50.1%)`,
           "-webkit-text-fill-color": "transparent",
           "-webkit-background-clip": "text",
           "background-repeat": "no-repeat",

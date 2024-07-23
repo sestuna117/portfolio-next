@@ -19,7 +19,7 @@ export const DesignModal = (props: DesignModalProps) => {
         >
           <div>Design </div>
           <button onClick={close}>X</button>
-          <div className={""}>
+          <div className={"text-2xl"}>
             The design for this portfolio was inspired by{" "}
             <a href={"https://pleasecallmechamp.com/"}>
               Champ Panupong Techawongthawon

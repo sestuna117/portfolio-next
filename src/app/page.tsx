@@ -9,7 +9,7 @@ export default function Home() {
       />
       <main
         className={
-          "h-screen py-16 px-32 bg-gradient-to-r from-malachite to-pastel-green"
+          "h-screen py-16 px-32 bg-cod-gray"
         }
       >
         <div className={"flex flex-col items-end"}>
