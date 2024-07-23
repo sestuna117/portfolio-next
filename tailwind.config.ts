@@ -9,6 +9,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "mobile-m": "375px",
+        fhd: "1980px",
+        qhd: "2560px",
+        "4k": "3840px",
+        "8k": "7680px",
+      },
       width: {
         "100vh": "100vh",
         inherit: "inherit",
@@ -18,6 +25,7 @@ const config: Config = {
         inherit: "inherit",
       },
       fontSize: {
+        "10xl": ["12rem", "13.25rem"],
         xxl: ["15rem", "16.25rem"],
       },
       fontFamily: {

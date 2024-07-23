@@ -15,7 +15,7 @@ export const DesignModalButton = () => {
   return (
     <>
       <button
-        className={`fixed bottom-5 right-20 text-sm font-sans font-semibold text-white`}
+        className={`fixed bottom-5 right-5 md:right-16 lg:right-20 text-sm font-sans font-semibold text-white`}
         onClick={openModal}
       >
         design

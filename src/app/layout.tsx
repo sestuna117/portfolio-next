@@ -20,6 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${gunterz.variable} font-gunterz`}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body
         className={`after:wiper after:translate-y-full 
           before:wiper before:-translate-y-full
