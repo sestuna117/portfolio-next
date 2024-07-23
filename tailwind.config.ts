@@ -66,6 +66,8 @@ const config: Config = {
         "background-flicker": "background-flicker 0.5s step-end",
         "slide-down": "slide-down 1s cubic-bezier(.76,.21,.23,.8) forwards",
         "flicker-away": "flicker-away 0.5s forwards",
+        "flicker-in": "flicker-in 0.5s forwards",
+        "fade-in": "fade-in 1.5s forwards",
       },
       keyframes: {
         "grow-infinite": {
@@ -245,6 +247,34 @@ const config: Config = {
           },
           "100%": {
             opacity: "0",
+          },
+        },
+        "flicker-in": {
+          "0%": {
+            opacity: "0",
+          },
+          "10%": {
+            opacity: "1",
+          },
+          "20%": {
+            opacity: "0",
+          },
+          "40%": {
+            opacity: "1",
+          },
+          "50%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
+        "fade-in": {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
           },
         },
       },
