@@ -10,7 +10,7 @@ export const PageTextBorder = (props: PageTextBorderProps) => {
   return (
     <>
       <div
-        className={`h-screen fixed left-0 transform -rotate-90 font-sans font-semibold text-sm w-100vh text-cod-gray`}
+        className={`h-screen fixed left-0 transform -rotate-90 font-sans font-semibold text-sm w-100vh text-white`}
       >
         <div
           className={"w-full absolute flex flex-row justify-between py-4 px-10"}
@@ -21,7 +21,7 @@ export const PageTextBorder = (props: PageTextBorderProps) => {
         </div>
       </div>
       <div
-        className={`h-screen fixed right-0 transform rotate-90 font-sans font-semibold text-sm w-100vh text-heavy-metal`}
+        className={`h-screen fixed right-0 transform rotate-90 font-sans font-semibold text-sm w-100vh text-white`}
       >
         <div
           className={"w-full absolute flex flex-row justify-between py-4 px-10"}
