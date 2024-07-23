@@ -11,9 +11,11 @@ const config: Config = {
     extend: {
       width: {
         "100vh": "100vh",
+        inherit: "inherit",
       },
       height: {
         "100vw": "100vw",
+        inherit: "inherit",
       },
       fontSize: {
         xxl: ["15rem", "16.25rem"],

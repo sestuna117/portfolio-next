@@ -14,18 +14,14 @@ export const DesignModal = (props: DesignModalProps) => {
     isOpen && (
       <DelayedGlitchTransitionScreen text={"Design"} delay={2000}>
         <div
-          className={`fixed top-0 left-0 w-screen h-screen p-40 font-sans bg-black text-alto m-auto flex flex-col`}
+          className={`fixed top-0 left-0 w-screen h-screen font-sans bg-black text-alto flex flex-col`}
           id={"designModal"}
         >
-          <button onClick={close}>
-            <IoMdClose className={"h-16 w-16"} />
-          </button>
           <div
-            className={
-              "before:corner-border-white before:w-[1400px] before:h-[400px] before:content-[''] before:absolute before:-z-10"
-            }
+            className={`relative m-auto max-w-[1400px] w-fit h-fit
+             before:h-full before:w-full before:content-[''] before:absolute before:-z-10 before:m-auto before:corner-border-white before:max-w-[1400px] before:block`}
           >
-            <div className={"p-10 text-4xl font-bold max-w-[1400px]"}>
+            <div className={"py-40 px-10 text-4xl font-bold"}>
               The design for this portfolio was inspired by{" "}
               <a
                 className={"text-heliotrope"}
@@ -38,11 +34,14 @@ export const DesignModal = (props: DesignModalProps) => {
                 Massive Assembly&apos;s
               </a>{" "}
               multiple works for the popular games League of Legends and
-              Valorant from Riot Games. Most of the inspiration came from their
-              collaborative work for League of Legends promotional works for MSI
-              2021 Championship.
+              Valorant from Riot Games with their use of a lot of bold fonts and
+              animations transitions. Make sure to check out the other works
+              they have done.
             </div>
           </div>
+          <button className={`absolute top-5 right-5`} onClick={close}>
+            <IoMdClose className={"h-16 w-16"} />
+          </button>
         </div>
       </DelayedGlitchTransitionScreen>
     )
