@@ -250,6 +250,27 @@ const config: Config = {
     }) {
       matchUtilities(
         {
+          "corner-border": (value) => {
+            return {
+              background: `linear-gradient(to right, ${value} 4px, transparent 4px) 0 0,
+                  linear-gradient(to right, ${value} 4px, transparent 4px) 0 100%,
+                  linear-gradient(to left, ${value} 4px, transparent 4px) 100% 0,
+                  linear-gradient(to left, ${value} 4px, transparent 4px) 100% 100%,
+                  linear-gradient(to bottom, ${value} 4px, transparent 4px) 0 0,
+                  linear-gradient(to bottom, ${value} 4px, transparent 4px) 100% 0,
+                  linear-gradient(to top, ${value} 4px, transparent 4px) 0 100%,
+                  linear-gradient(to top, ${value} 4px, transparent 4px) 100% 100%`,
+              "background-repeat": "no-repeat",
+              "background-size": "30px 30px",
+            };
+          },
+        },
+        {
+          values: theme("colors"),
+        },
+      );
+      matchUtilities(
+        {
           "animation-delay": (value) => {
             return {
               "animation-delay": value,
