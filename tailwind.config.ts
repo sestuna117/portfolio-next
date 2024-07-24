@@ -56,6 +56,9 @@ const config: Config = {
         "black-bars-horizontal":
           "-webkit-linear-gradient(left, black, black 10%, transparent 10%, transparent 90%, black 90%)",
       },
+      content: {
+        empty: "''",
+      },
       animation: {
         "grow-infinite": "grow-infinite 9s infinite",
         "glitch-flicker-1":
@@ -68,6 +71,7 @@ const config: Config = {
         "flicker-away": "flicker-away 0.5s forwards",
         "flicker-in": "flicker-in 0.5s forwards",
         "fade-in": "fade-in 1.5s forwards",
+        "expand-spread": "expand-spread 1.5s infinite",
       },
       keyframes: {
         "grow-infinite": {
@@ -275,6 +279,15 @@ const config: Config = {
           },
           "100%": {
             opacity: "1",
+          },
+        },
+        "expand-spread": {
+          "0%": {
+            height: "2px",
+            width: "2px",
+          },
+          "50%": {
+            width: "100vw",
           },
         },
       },

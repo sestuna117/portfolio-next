@@ -30,7 +30,7 @@ export const DelayedGlitchTransitionScreen = (
     children
   ) : (
     <div
-      className={`fixed top-0 left-0 w-screen h-screen font-sans text-alto bg-black-bars-vertical before:w-screen before:h-screen before:content-[''] before:absolute before:-top-full before:bg-black`}
+      className={`fixed top-0 left-0 w-screen h-screen font-sans text-alto bg-black-bars-vertical before:w-screen before:h-screen before:content-empty before:absolute before:-top-full before:bg-black`}
       id={"black-bar-transition"}
     >
       <div

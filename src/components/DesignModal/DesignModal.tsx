@@ -14,12 +14,15 @@ export const DesignModal = (props: DesignModalProps) => {
     isOpen && (
       <DelayedGlitchTransitionScreen text={"Design"} delay={2000}>
         <div
-          className={`fixed top-0 left-0 w-screen h-screen font-sans bg-black text-alto flex flex-col`}
+          className={`fixed top-0 left-0 w-screen h-screen font-sans bg-black text-alto flex flex-col
+          
+                      before:content-empty before:absolute before:top-[46.5%] before:left-[46.5%] before:m-auto 
+                      before:block before:h-[100px] before:w-[100px] before:z-1 before:w-[75%]`}
           id={"designModal"}
         >
           <div
             className={`relative m-auto max-w-[1400px] w-fit h-fit md:w-[90%] before:animate-flicker-in
-                        before:h-full before:w-full before:content-[''] before:absolute before:-z-10 
+                        before:h-full before:w-full before:content-empty before:absolute before:-z-10 
                         before:m-auto before:corner-border-white before:max-w-[1560px] before:block`}
           >
             <div
