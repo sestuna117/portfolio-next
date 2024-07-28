@@ -281,15 +281,6 @@ const config: Config = {
             opacity: "1",
           },
         },
-        "expand-spread": {
-          "0%": {
-            height: "2px",
-            width: "2px",
-          },
-          "50%": {
-            width: "100vw",
-          },
-        },
       },
     },
   },
