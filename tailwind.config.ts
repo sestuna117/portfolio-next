@@ -72,6 +72,8 @@ const config: Config = {
         "flicker-in": "flicker-in 0.5s forwards",
         "fade-in": "fade-in 1.5s forwards",
         "expand-spread": "expand-spread 1.5s infinite",
+        "slide-line-1": "slide-line-1 0.5s forwards",
+        "slide-line-2": "slide-line-2 0.5s forwards",
       },
       keyframes: {
         "grow-infinite": {
@@ -281,6 +283,22 @@ const config: Config = {
             opacity: "1",
           },
         },
+        "slide-line-1": {
+          "0%": {
+            transform: "translateX(150vh)",
+          },
+          "100%": {
+            transform: "translateX(0)",
+          },
+        },
+        "slide-line-2": {
+          "0%": {
+            transform: "translateX(-100vw)",
+          },
+          "100%": {
+            transform: "translateX(0)",
+          },
+        },
       },
     },
   },
@@ -360,6 +378,10 @@ const config: Config = {
           "-webkit-text-fill-color": "transparent",
           "-webkit-background-clip": "text",
           "background-repeat": "no-repeat",
+        },
+        "backdrop-visibility-hidden": {
+          "backdrop-visibility": "hidden",
+          "-webkit-backface-visibility": "hidden",
         },
       });
       addComponents({

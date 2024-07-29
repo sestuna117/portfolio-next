@@ -18,25 +18,26 @@ export const DesignModal = (props: DesignModalProps) => {
             id={"designModal"}
         >
           <svg
-              className={"absolute top-20"}
-              height="1"
+              className={"absolute top-20 animate-slide-line-1 backdrop-visibility-hidden"}
+              height="3"
               width="100%"
               viewBox="0 0 100 50"
               preserveAspectRatio="none"
           >
             <line
+                className={""}
                 x1="0"
                 y1="0"
                 x2="100"
                 y2="0"
                 stroke="white"
-                strokeWidth="1px"
+                strokeWidth="100%"
                 vectorEffect="non-scaling-stroke"
             />
           </svg>
           <svg
-              className={"absolute bottom-20"}
-              height="1"
+              className={"absolute bottom-20 animate-slide-line-2 backdrop-visibility-hidden"}
+              height="3"
               width="100%"
               viewBox="0 0 100 50"
               preserveAspectRatio="none"
@@ -47,7 +48,7 @@ export const DesignModal = (props: DesignModalProps) => {
                 x2="100"
                 y2="0"
                 stroke="white"
-                strokeWidth="1px"
+                strokeWidth="100%"
                 vectorEffect="non-scaling-stroke"
             />
           </svg>
