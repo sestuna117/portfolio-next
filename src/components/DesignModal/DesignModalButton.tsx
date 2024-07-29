@@ -17,9 +17,9 @@ export const DesignModalButton = () => {
     designText?.classList.add("animate-squish-vertical");
     designLine1?.classList.add("animate-slide-line-1-exit");
     designLine2?.classList.add("animate-slide-line-2-exit");
-    await sleep(1500);
+    await sleep(1250);
     designModal?.classList.add("animate-fade-out");
-    await sleep(250)
+    await sleep(500)
 
     setShowModal(false);
   };
