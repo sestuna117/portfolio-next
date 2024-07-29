@@ -15,10 +15,11 @@ export const DesignModal = (props: DesignModalProps) => {
       <DelayedGlitchTransitionScreen text={"Design"} delay={2000}>
         <div
             className={`fixed top-0 left-0 w-screen h-screen font-sans bg-black text-alto flex flex-col`}
-            id={"designModal"}
+            id={"design-modal"}
         >
           <svg
-              className={"absolute top-20 animate-slide-line-1 backdrop-visibility-hidden"}
+              className={"absolute top-0 animate-slide-line-1"}
+              id={"design-line-1"}
               height="3"
               width="100%"
               viewBox="0 0 100 50"
@@ -36,7 +37,8 @@ export const DesignModal = (props: DesignModalProps) => {
             />
           </svg>
           <svg
-              className={"absolute bottom-20 animate-slide-line-2 backdrop-visibility-hidden"}
+              className={"absolute bottom-0 animate-slide-line-2"}
+              id={"design-line-2"}
               height="3"
               width="100%"
               viewBox="0 0 100 50"
@@ -56,6 +58,7 @@ export const DesignModal = (props: DesignModalProps) => {
               className={`relative m-auto max-w-[1400px] w-fit h-fit md:w-[90%] before:animate-flicker-in
                         before:h-full before:w-full before:content-empty before:absolute before:-z-10 
                         before:m-auto before:corner-border-white before:max-w-[1560px] before:block`}
+              id={"design-text"}
           >
             <div
                 className={

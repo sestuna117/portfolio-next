@@ -71,9 +71,13 @@ const config: Config = {
         "flicker-away": "flicker-away 0.5s forwards",
         "flicker-in": "flicker-in 0.5s forwards",
         "fade-in": "fade-in 1.5s forwards",
+        "fade-out": "fade-out 0.5s forwards",
         "expand-spread": "expand-spread 1.5s infinite",
         "slide-line-1": "slide-line-1 0.5s forwards",
-        "slide-line-2": "slide-line-2 0.5s forwards",
+        "slide-line-2": "slide-line-2 0.25s forwards",
+        "slide-line-1-exit": "slide-line-1-exit 1.5s forwards",
+        "slide-line-2-exit": "slide-line-2-exit 1.5s forwards",
+        "squish-vertical": "squish-vertical 0.75s forwards"
       },
       keyframes: {
         "grow-infinite": {
@@ -283,20 +287,59 @@ const config: Config = {
             opacity: "1",
           },
         },
-        "slide-line-1": {
+        "fade-out": {
           "0%": {
-            transform: "translateX(150vh)",
+            opacity: "1",
           },
           "100%": {
-            transform: "translateX(0)",
+            opacity: "0",
+          },
+        },
+        "slide-line-1": {
+          "0%": {
+            transform: "translate(150vw, 5rem)",
+          },
+          "100%": {
+            transform: "translate(0, 5rem)",
           },
         },
         "slide-line-2": {
           "0%": {
-            transform: "translateX(-100vw)",
+            transform: "translate(-100vw, -5rem)",
           },
           "100%": {
-            transform: "translateX(0)",
+            transform: "translate(0, -5rem)",
+          },
+        },
+        "slide-line-1-exit": {
+          "0%": {
+            transform: "translate(0, 5rem)",
+          },
+          "50%": {
+            transform: "translateY(50vh)",
+          },
+          "100%": {
+            transform: "translate(-150vw, 50vh)",
+          },
+        },
+        "slide-line-2-exit": {
+          "0%": {
+            bottom: "0",
+            transform: "translate(0, -5rem)",
+          },
+          "50%": {
+            transform: "translateY(-50vh)",
+          },
+          "100%": {
+            transform: "translate(150vw, -50vh)",
+          },
+        },
+        "squish-vertical": {
+          "0%": {
+            transform: "scaleY(1)",
+          },
+          "100%": {
+            transform: "scaleY(0)",
           },
         },
       },
