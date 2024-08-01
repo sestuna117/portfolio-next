@@ -19,7 +19,7 @@ export const DesignModalButton = () => {
     designLine2?.classList.add("animate-slide-line-2-exit");
     await sleep(1250);
     designModal?.classList.add("animate-fade-out");
-    await sleep(500)
+    await sleep(250)
 
     setShowModal(false);
   };

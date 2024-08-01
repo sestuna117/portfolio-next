@@ -71,13 +71,13 @@ const config: Config = {
         "flicker-away": "flicker-away 0.5s forwards",
         "flicker-in": "flicker-in 0.5s forwards",
         "fade-in": "fade-in 1.5s forwards",
-        "fade-out": "fade-out 0.5s forwards",
+        "fade-out": "fade-out 0.25s forwards",
         "expand-spread": "expand-spread 1.5s infinite",
         "slide-line-1": "slide-line-1 0.5s forwards",
         "slide-line-2": "slide-line-2 0.25s forwards",
-        "slide-line-1-exit": "slide-line-1-exit 1.5s forwards",
-        "slide-line-2-exit": "slide-line-2-exit 1.5s forwards",
-        "squish-vertical": "squish-vertical 0.75s forwards"
+        "slide-line-1-exit": "slide-line-1-exit 1.25s forwards",
+        "slide-line-2-exit": "slide-line-2-exit 1.25s forwards",
+        "squish-vertical": "squish-vertical 0.15s forwards"
       },
       keyframes: {
         "grow-infinite": {
@@ -315,7 +315,7 @@ const config: Config = {
           "0%": {
             transform: "translate(0, 5rem)",
           },
-          "50%": {
+          "40%": {
             transform: "translateY(50vh)",
           },
           "100%": {
@@ -327,7 +327,7 @@ const config: Config = {
             bottom: "0",
             transform: "translate(0, -5rem)",
           },
-          "50%": {
+          "40%": {
             transform: "translateY(-50vh)",
           },
           "100%": {
