@@ -1,7 +1,6 @@
 "use client";
 import Link, { LinkProps } from "next/link";
 import React from "react";
-import { useRouter } from "next/navigation";
 import { sleep } from "@/utils";
 
 interface HomeLinkProps extends LinkProps {
@@ -10,7 +9,6 @@ interface HomeLinkProps extends LinkProps {
 }
 
 export const HomeLink = (props: HomeLinkProps) => {
-  const router = useRouter();
   const { href, label } = props;
 
   const handleClick = async (
@@ -33,17 +31,17 @@ export const HomeLink = (props: HomeLinkProps) => {
   };
 
   return (
-    <Link
+    <a
       className={`text-white relative inline-block text-right font-bold uppercase 
                  text-4xl mobile-m:text-5xl md:text-7xl lg:text-9xl 2xl:text-10xl fhd:text-xxl
                  before:wipe before:content-[attr(id)] before:background-size-width-[0] before:inline-block before:text-right 
                  before:font-bold before:uppercase before:absolute before:top-0 before:left-0 
                  before:transition-background-size before:ease-slow-wipe before:duration-500 hover:before:background-size-width-[220%]`}
       id={label}
-      onClick={handleClick}
+      // onClick={handleClick}
       href={href}
     >
       {label}
-    </Link>
+    </a>
   );
 };

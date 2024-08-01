@@ -342,6 +342,12 @@ const config: Config = {
             transform: "scaleY(0)",
           },
         },
+        "slide-text-up-right": {
+          "0%": {
+            transform: "scaleY(1)",
+            opacity: "0",
+          }
+        }
       },
     },
   },
