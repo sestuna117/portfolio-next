@@ -78,7 +78,7 @@ const config: Config = {
         "slide-design-line-1-exit": "slide-design-line-1-exit 1.25s forwards",
         "slide-design-line-2-exit": "slide-design-line-2-exit 1.25s forwards",
         "squish-vertical": "squish-vertical 0.15s forwards",
-        "slide-text-up-right": "slide-text-up-right 0.65s forwards",
+        "slide-text-up-right": "slide-text-up-right 0.55s forwards",
         "slide-up-body-line": "slide-up-body-line 0.75s forwards",
       },
       keyframes: {
