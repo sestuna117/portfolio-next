@@ -73,11 +73,13 @@ const config: Config = {
         "fade-in": "fade-in 1.5s forwards",
         "fade-out": "fade-out 0.25s forwards",
         "expand-spread": "expand-spread 1.5s infinite",
-        "slide-line-1": "slide-line-1 0.5s forwards",
-        "slide-line-2": "slide-line-2 0.25s forwards",
-        "slide-line-1-exit": "slide-line-1-exit 1.25s forwards",
-        "slide-line-2-exit": "slide-line-2-exit 1.25s forwards",
-        "squish-vertical": "squish-vertical 0.15s forwards"
+        "slide-design-line-1": "slide-design-line-1 0.5s forwards",
+        "slide-design-line-2": "slide-design-line-2 0.25s forwards",
+        "slide-design-line-1-exit": "slide-design-line-1-exit 1.25s forwards",
+        "slide-design-line-2-exit": "slide-design-line-2-exit 1.25s forwards",
+        "squish-vertical": "squish-vertical 0.15s forwards",
+        "slide-text-up-right": "slide-text-up-right 0.65s forwards",
+        "slide-up-body-line": "slide-up-body-line 0.75s forwards",
       },
       keyframes: {
         "grow-infinite": {
@@ -295,7 +297,7 @@ const config: Config = {
             opacity: "0",
           },
         },
-        "slide-line-1": {
+        "slide-design-line-1": {
           "0%": {
             transform: "translate(150vw, 5rem)",
           },
@@ -303,7 +305,7 @@ const config: Config = {
             transform: "translate(0, 5rem)",
           },
         },
-        "slide-line-2": {
+        "slide-design-line-2": {
           "0%": {
             transform: "translate(-100vw, -5rem)",
           },
@@ -311,7 +313,7 @@ const config: Config = {
             transform: "translate(0, -5rem)",
           },
         },
-        "slide-line-1-exit": {
+        "slide-design-line-1-exit": {
           "0%": {
             transform: "translate(0, 5rem)",
           },
@@ -322,7 +324,7 @@ const config: Config = {
             transform: "translate(-150vw, 50vh)",
           },
         },
-        "slide-line-2-exit": {
+        "slide-design-line-2-exit": {
           "0%": {
             bottom: "0",
             transform: "translate(0, -5rem)",
@@ -344,10 +346,28 @@ const config: Config = {
         },
         "slide-text-up-right": {
           "0%": {
-            transform: "scaleY(1)",
+            transform: "translate(30vw, 20px)",
             opacity: "0",
-          }
-        }
+          },
+          "20%": {
+            opacity: "1",
+          },
+          "50%": {
+            transform: "translate(30vw, 0)",
+          },
+          "100%": {
+            transform: "translate(0, 0)",
+            opacity: "1",
+          },
+        },
+        "slide-up-body-line": {
+          "0%": {
+            transform: "translateY(100vh)",
+          },
+          "100%": {
+            transform: "translateY(0)",
+          },
+        },
       },
     },
   },

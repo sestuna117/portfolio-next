@@ -18,7 +18,7 @@ export const DesignModal = (props: DesignModalProps) => {
             id={"design-modal"}
         >
           <svg
-              className={"absolute top-0 animate-slide-line-1"}
+              className={"absolute top-0 animate-slide-design-line-1"}
               id={"design-line-1"}
               height="3"
               width="100%"
@@ -26,7 +26,6 @@ export const DesignModal = (props: DesignModalProps) => {
               preserveAspectRatio="none"
           >
             <line
-                className={""}
                 x1="0"
                 y1="0"
                 x2="100"
@@ -37,7 +36,7 @@ export const DesignModal = (props: DesignModalProps) => {
             />
           </svg>
           <svg
-              className={"absolute bottom-0 animate-slide-line-2"}
+              className={"absolute bottom-0 animate-slide-design-line-2"}
               id={"design-line-2"}
               height="3"
               width="100%"

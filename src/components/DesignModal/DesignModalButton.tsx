@@ -15,8 +15,8 @@ export const DesignModalButton = () => {
     const designLine1 = document.getElementById("design-line-1");
     const designLine2 = document.getElementById("design-line-2");
     designText?.classList.add("animate-squish-vertical");
-    designLine1?.classList.add("animate-slide-line-1-exit");
-    designLine2?.classList.add("animate-slide-line-2-exit");
+    designLine1?.classList.add("animate-slide-design-line-1-exit");
+    designLine2?.classList.add("animate-slide-design-line-2-exit");
     await sleep(1250);
     designModal?.classList.add("animate-fade-out");
     await sleep(250)
