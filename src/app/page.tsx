@@ -17,7 +17,7 @@ export default function Home() {
         <div id={"home"} className={"h-screen bg-cod-gray py-16"}>
           <div className={"flex flex-col items-end"}>
             <HomeLink href={"#about"} label={"About"} />
-            <HomeLink href={"#work"} label={"Work"} />
+            <HomeLink href={"#work"} label={"Experience"} />
             <HomeLink href={"#projects"} label={"Projects"} />
           </div>
         </div>

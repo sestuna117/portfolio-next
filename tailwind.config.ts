@@ -26,7 +26,7 @@ const config: Config = {
       },
       fontSize: {
         "10xl": ["12rem", "13.25rem"],
-        xxl: ["15rem", "16.25rem"],
+        xxl: ["14rem", "15.25rem"],
       },
       fontFamily: {
         gunterz: ["var(--font-gunterz)"],
@@ -79,7 +79,7 @@ const config: Config = {
         "slide-design-line-2-exit": "slide-design-line-2-exit 1.25s forwards",
         "squish-vertical": "squish-vertical 0.15s forwards",
         "slide-text-up-right": "slide-text-up-right 0.45s forwards",
-        "slide-text-up-show": "slide-text-up-show 0.5s forwards",
+        "slide-text-up-show": "slide-text-up-show 0.3s forwards",
         "slide-up-body-line": "slide-up-body-line 0.5s forwards",
       },
       keyframes: {
