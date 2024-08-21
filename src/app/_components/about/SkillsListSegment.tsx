@@ -15,7 +15,7 @@ import {
 } from "react-icons/ri";
 import { InView } from "react-intersection-observer";
 
-export default function SkillsList() {
+export default function SkillsListSegment() {
   return (
     <InView triggerOnce threshold={1}>
       {({ inView, ref }) => (
@@ -28,7 +28,7 @@ export default function SkillsList() {
           <BiLogoJavascript
             className={
               inView
-                ? "opacity-0 animate-slide-text-up-show animation-delay-1000"
+                ? "opacity-0 animate-slide-text-up-right animation-delay-1000"
                 : "opacity-0"
             }
             size={64}
@@ -36,7 +36,7 @@ export default function SkillsList() {
           <RiReactjsFill
             className={
               inView
-                ? "opacity-0 animate-slide-text-up-show animation-delay-[1110ms]"
+                ? "opacity-0 animate-slide-text-up-right animation-delay-[1110ms]"
                 : "opacity-0"
             }
             size={64}
@@ -44,7 +44,7 @@ export default function SkillsList() {
           <BiLogoTypescript
             className={
               inView
-                ? "opacity-0 animate-slide-text-up-show animation-delay-[1220ms]"
+                ? "opacity-0 animate-slide-text-up-right animation-delay-[1220ms]"
                 : "opacity-0"
             }
             size={64}
@@ -52,7 +52,7 @@ export default function SkillsList() {
           <RiNextjsFill
             className={
               inView
-                ? "opacity-0 animate-slide-text-up-show animation-delay-[1330ms]"
+                ? "opacity-0 animate-slide-text-up-right animation-delay-[1330ms]"
                 : "opacity-0"
             }
             size={64}
@@ -60,7 +60,7 @@ export default function SkillsList() {
           <BiLogoHtml5
             className={
               inView
-                ? "opacity-0 animate-slide-text-up-show animation-delay-[1440ms]"
+                ? "opacity-0 animate-slide-text-up-right animation-delay-[1440ms]"
                 : "opacity-0"
             }
             size={64}
@@ -68,7 +68,7 @@ export default function SkillsList() {
           <RiJavaFill
             className={
               inView
-                ? "opacity-0 animate-slide-text-up-show animation-delay-[1550ms]"
+                ? "opacity-0 animate-slide-text-up-right animation-delay-[1550ms]"
                 : "opacity-0"
             }
             size={64}
@@ -76,7 +76,7 @@ export default function SkillsList() {
           <BiLogoCss3
             className={
               inView
-                ? "opacity-0 animate-slide-text-up-show animation-delay-[1660ms]"
+                ? "opacity-0 animate-slide-text-up-right animation-delay-[1660ms]"
                 : "opacity-0"
             }
             size={64}
@@ -84,7 +84,7 @@ export default function SkillsList() {
           <RiNodejsLine
             className={
               inView
-                ? "opacity-0 animate-slide-text-up-show animation-delay-[1770ms]"
+                ? "opacity-0 animate-slide-text-up-right animation-delay-[1770ms]"
                 : "opacity-0"
             }
             size={64}

@@ -78,6 +78,7 @@ const config: Config = {
         "slide-design-line-1-exit": "slide-design-line-1-exit 1.25s forwards",
         "slide-design-line-2-exit": "slide-design-line-2-exit 1.25s forwards",
         "squish-vertical": "squish-vertical 0.15s forwards",
+        "slide-heading-up-right": "slide-heading-up-right 0.3s forwards",
         "slide-text-up-right": "slide-text-up-right 0.45s forwards",
         "slide-text-up-show": "slide-text-up-show 0.3s forwards",
         "slide-up-body-line": "slide-up-body-line 0.5s forwards",
@@ -345,7 +346,7 @@ const config: Config = {
             transform: "scaleY(0)",
           },
         },
-        "slide-text-up-right": {
+        "slide-heading-up-right": {
           "0%": {
             transform: "translate(30vw, 20px)",
             opacity: "0",
@@ -355,6 +356,22 @@ const config: Config = {
           },
           "50%": {
             transform: "translate(30vw, 0)",
+          },
+          "100%": {
+            transform: "translate(0, 0)",
+            opacity: "1",
+          },
+        },
+        "slide-text-up-right": {
+          "0%": {
+            transform: "translate(180px, 20px)",
+            opacity: "0",
+          },
+          "20%": {
+            opacity: "1",
+          },
+          "50%": {
+            transform: "translate(180px, 0)",
           },
           "100%": {
             transform: "translate(0, 0)",

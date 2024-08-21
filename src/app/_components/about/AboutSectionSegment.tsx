@@ -28,7 +28,7 @@ export default function AboutSectionSegment({
             <span
               className={
                 inView
-                  ? "inline-block opacity-0 animate-slide-text-up-right"
+                  ? "inline-block opacity-0 animate-slide-heading-up-right"
                   : "opacity-0"
               }
               style={{ animationDelay: `${titleAnimationDelay}ms` }}
@@ -39,7 +39,7 @@ export default function AboutSectionSegment({
               <span
                 className={
                   inView
-                    ? "ml-3 inline-block opacity-0 text-heliotrope animate-slide-text-up-right"
+                    ? "ml-3 inline-block opacity-0 text-heliotrope animate-slide-heading-up-right"
                     : "opacity-0"
                 }
                 style={{ animationDelay: `${titleAnimationDelay + 150}ms` }}
