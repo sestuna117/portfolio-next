@@ -12,6 +12,7 @@ const AboutSection = () => {
         childrenClassNameInView={""}
         titleAnimationDelay={500}
         dividerAnimationDelay={0}
+        threshold={0.2}
       >
         <AboutMeSegment />
       </AboutSectionSegment>
@@ -22,6 +23,7 @@ const AboutSection = () => {
         childrenClassNameInView={""}
         titleAnimationDelay={750}
         dividerAnimationDelay={250}
+        threshold={1}
       >
         <SkillsListSegment />
       </AboutSectionSegment>
@@ -33,6 +35,7 @@ const AboutSection = () => {
         }
         titleAnimationDelay={1000}
         dividerAnimationDelay={500}
+        threshold={1}
       ></AboutSectionSegment>
     </div>
   );

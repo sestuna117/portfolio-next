@@ -10,6 +10,7 @@ interface AboutSectionSegmentProps {
   childrenClassNameInView: string;
   titleAnimationDelay: number;
   dividerAnimationDelay: number;
+  threshold: number;
 }
 
 export default function AboutSectionSegment({
@@ -19,9 +20,10 @@ export default function AboutSectionSegment({
   childrenClassNameInView,
   titleAnimationDelay,
   dividerAnimationDelay,
+  threshold
 }: AboutSectionSegmentProps) {
   return (
-    <InView triggerOnce threshold={1}>
+    <InView triggerOnce threshold={threshold}>
       {({ inView, ref }) => (
         <div ref={ref} className={"mb-10"}>
           <div className={"text-4xl mb-[10px] w-full"}>
