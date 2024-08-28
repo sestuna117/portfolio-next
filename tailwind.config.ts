@@ -55,6 +55,8 @@ const config: Config = {
           "-webkit-linear-gradient(black, black 15%, transparent 15%, transparent 85%, black 85%)",
         "black-bars-horizontal":
           "-webkit-linear-gradient(left, black, black 10%, transparent 10%, transparent 90%, black 90%)",
+        "diagonal-grid":
+          "linear-gradient(to right, rgba(255, 255, 255, .2) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, .2) 1px, transparent 1px);",
       },
       content: {
         empty: "''",
@@ -82,6 +84,7 @@ const config: Config = {
         "slide-text-up-right": "slide-text-up-right 0.45s forwards",
         "slide-text-up-show": "slide-text-up-show 0.3s forwards",
         "slide-up-body-line": "slide-up-body-line 0.5s forwards",
+        "scrolling-grid-bg": "scrolling-grid-bg 30s linear infinite",
       },
       keyframes: {
         "grow-infinite": {
@@ -396,6 +399,11 @@ const config: Config = {
             transform: "translateY(0)",
           },
         },
+        "scrolling-grid-bg": {
+          to: {
+            "background-position-y": "bottom",
+          },
+        },
       },
     },
   },
@@ -452,6 +460,18 @@ const config: Config = {
           values: theme("transitionDuration"),
         },
       );
+      matchUtilities(
+        {
+          "rotate-x": (value) => {
+            return {
+              "	transform": `rotateX(${value})`,
+            };
+          },
+        },
+        {
+          values: theme("rotate"),
+        },
+      );
       matchUtilities({
         "text-stroke": (value) => ({
           "-webkit-text-stroke-width": `${value}px`,
@@ -462,6 +482,9 @@ const config: Config = {
         }),
         "clip-path": (value) => ({
           "clip-path": `${value}`,
+        }),
+        perspective: (value) => ({
+          perspective: `${value}`,
         }),
       });
       addUtilities({
