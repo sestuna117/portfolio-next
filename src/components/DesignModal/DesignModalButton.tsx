@@ -7,6 +7,7 @@ export const DesignModalButton = () => {
   const [showModal, setShowModal] = useState(false);
   const openModal = () => {
     setShowModal(!showModal);
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = async () => {
@@ -21,6 +22,7 @@ export const DesignModalButton = () => {
     designModal?.classList.add("animate-fade-out");
     await sleep(250)
 
+    document.body.style.overflow = "auto";
     setShowModal(false);
   };
 

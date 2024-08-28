@@ -9,7 +9,6 @@ const AboutSection = () => {
       <AboutSectionSegment
         titleText={"About "}
         secondTitleText={"Me"}
-        childrenClassNameInView={""}
         titleAnimationDelay={500}
         dividerAnimationDelay={0}
         threshold={0.2}
@@ -20,23 +19,12 @@ const AboutSection = () => {
       <AboutSectionSegment
         titleText={"Technical "}
         secondTitleText={"Skills"}
-        childrenClassNameInView={""}
         titleAnimationDelay={750}
         dividerAnimationDelay={250}
-        threshold={1}
+        threshold={0.5}
       >
         <SkillsListSegment />
       </AboutSectionSegment>
-
-      <AboutSectionSegment
-        titleText={"Education"}
-        childrenClassNameInView={
-          "opacity-0 animate-slide-text-up-show animation-delay-500"
-        }
-        titleAnimationDelay={1000}
-        dividerAnimationDelay={500}
-        threshold={1}
-      ></AboutSectionSegment>
     </div>
   );
 };

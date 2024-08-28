@@ -8,7 +8,7 @@ export default function AboutMeSegment() {
     <InView triggerOnce threshold={0.5}>
       {({ inView, ref }) => (
         <div ref={ref}>
-          <div
+          <p
             className={
               inView
                 ? "mb-10 opacity-0 animate-slide-text-up-show animation-delay-[1250ms]"
@@ -24,8 +24,8 @@ export default function AboutMeSegment() {
             development could give you, and it helped motivate me even more to
             continue. Since then I&apos;ve been hooked on creating webpages and
             the many other aspects of frontend development.
-          </div>
-          <div
+          </p>
+          <p
             className={
               inView
                 ? "opacity-0 animate-slide-text-up-show animation-delay-[1500ms]"
@@ -44,7 +44,7 @@ export default function AboutMeSegment() {
             . What I find the most enjoyable is when I&apos;m given the
             opportunity to work with both the design and the development portion
             of a component. I want things to look nice as well as functional.
-          </div>
+          </p>
         </div>
       )}
     </InView>

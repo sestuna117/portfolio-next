@@ -17,7 +17,7 @@ import { InView } from "react-intersection-observer";
 
 export default function SkillsListSegment() {
   return (
-    <InView triggerOnce threshold={1}>
+    <InView triggerOnce threshold={0.5}>
       {({ inView, ref }) => (
         <div
           ref={ref}

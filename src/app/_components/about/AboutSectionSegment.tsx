@@ -7,7 +7,6 @@ interface AboutSectionSegmentProps {
   titleText: string;
   secondTitleText?: string;
   children: React.ReactNode;
-  childrenClassNameInView: string;
   titleAnimationDelay: number;
   dividerAnimationDelay: number;
   threshold: number;
@@ -17,7 +16,6 @@ export default function AboutSectionSegment({
   titleText,
   secondTitleText,
   children,
-  childrenClassNameInView,
   titleAnimationDelay,
   dividerAnimationDelay,
   threshold
@@ -74,7 +72,7 @@ export default function AboutSectionSegment({
             />
           </svg>
           <div
-            className={`mt-4 ${inView ? childrenClassNameInView : "opacity-0"}`}
+            className={`mt-4 ${inView ? "opacity-1" : "opacity-0"}`}
           >
             {children}
           </div>
