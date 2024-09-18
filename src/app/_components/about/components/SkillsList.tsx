@@ -1,21 +1,21 @@
 "use client";
 
 import React from "react";
-import {
-  BiLogoCss3,
-  BiLogoHtml5,
-  BiLogoJavascript,
-  BiLogoTypescript,
-} from "react-icons/bi";
-import {
-  RiJavaFill,
-  RiNextjsFill,
-  RiNodejsLine,
-  RiReactjsFill,
-} from "react-icons/ri";
 import { InView } from "react-intersection-observer";
+import SkillsListItem from "@/app/_components/about/components/SkillsListItem";
 
 export default function SkillsList() {
+  const SKILLS_LIST = [
+    "Javascript",
+    "React",
+    "Typescript",
+    "Next.js",
+    "HTML",
+    "Java",
+    "CSS",
+    "Node.js",
+  ];
+
   return (
     <InView triggerOnce threshold={0.5}>
       {({ inView, ref }) => (
@@ -25,70 +25,14 @@ export default function SkillsList() {
             "w-full flex flex-col justify-space-between items-center flex-wrap h-[172px] [&>*]:m-2"
           }
         >
-          <BiLogoJavascript
-            className={
-              inView
-                ? "opacity-0 animate-slide-text-up-right animation-delay-1000"
-                : "opacity-0"
-            }
-            size={64}
-          />
-          <RiReactjsFill
-            className={
-              inView
-                ? "opacity-0 animate-slide-text-up-right animation-delay-[1110ms]"
-                : "opacity-0"
-            }
-            size={64}
-          />
-          <BiLogoTypescript
-            className={
-              inView
-                ? "opacity-0 animate-slide-text-up-right animation-delay-[1220ms]"
-                : "opacity-0"
-            }
-            size={64}
-          />
-          <RiNextjsFill
-            className={
-              inView
-                ? "opacity-0 animate-slide-text-up-right animation-delay-[1330ms]"
-                : "opacity-0"
-            }
-            size={64}
-          />
-          <BiLogoHtml5
-            className={
-              inView
-                ? "opacity-0 animate-slide-text-up-right animation-delay-[1440ms]"
-                : "opacity-0"
-            }
-            size={64}
-          />
-          <RiJavaFill
-            className={
-              inView
-                ? "opacity-0 animate-slide-text-up-right animation-delay-[1550ms]"
-                : "opacity-0"
-            }
-            size={64}
-          />
-          <BiLogoCss3
-            className={
-              inView
-                ? "opacity-0 animate-slide-text-up-right animation-delay-[1660ms]"
-                : "opacity-0"
-            }
-            size={64}
-          />
-          <RiNodejsLine
-            className={
-              inView
-                ? "opacity-0 animate-slide-text-up-right animation-delay-[1770ms]"
-                : "opacity-0"
-            }
-            size={64}
-          />
+          {SKILLS_LIST.map((skill, index) => (
+            <SkillsListItem
+              key={`skill-list-${index}`}
+              inView={inView}
+              name={skill}
+              animationDelay={1000 + 110 * index}
+            />
+          ))}
         </div>
       )}
     </InView>
