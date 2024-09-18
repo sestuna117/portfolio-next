@@ -3,6 +3,7 @@ import { PageTextBorder } from "@/components/PageTextBorder";
 import React from "react";
 import AboutSection from "@/app/_components/about/AboutSection";
 import ScrollingGridBackground from "@/app/_components/ScrollingGridBackground";
+import ExperienceSection from "@/app/_components/experience/ExperienceSection";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
           </div>
         </div>
         <AboutSection />
+        <ExperienceSection />
       </div>
     </main>
   );

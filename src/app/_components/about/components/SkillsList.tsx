@@ -15,7 +15,7 @@ import {
 } from "react-icons/ri";
 import { InView } from "react-intersection-observer";
 
-export default function SkillsListSegment() {
+export default function SkillsList() {
   return (
     <InView triggerOnce threshold={0.5}>
       {({ inView, ref }) => (

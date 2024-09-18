@@ -223,7 +223,7 @@ const config: Config = {
         },
         "background-flicker": {
           "0%": {
-            "background-color": "white",
+            "background-color": "black",
             "background-image": "none",
           },
           "10%": {
@@ -232,7 +232,7 @@ const config: Config = {
             "background-color": "rgba(0, 0, 0, 0.4)",
           },
           "12%": {
-            "background-color": "white",
+            "background-color": "black",
             "background-image": "none",
           },
           "30%": {

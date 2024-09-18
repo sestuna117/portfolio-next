@@ -12,7 +12,7 @@ interface AboutSectionSegmentProps {
   threshold: number;
 }
 
-export default function AboutSectionSegment({
+export default function AboutSegmentWrapper({
   titleText,
   secondTitleText,
   children,

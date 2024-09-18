@@ -1,30 +1,30 @@
 import React from "react";
-import AboutSectionSegment from "@/app/_components/about/AboutSectionSegment";
-import SkillsListSegment from "@/app/_components/about/SkillsListSegment";
-import AboutMeSegment from "@/app/_components/about/AboutMeSegment";
+import AboutSegmentWrapper from "@/app/_components/about/components/AboutSegmentWrapper";
+import SkillsList from "@/app/_components/about/components/SkillsList";
+import AboutMe from "@/app/_components/about/components/AboutMe";
 
 const AboutSection = () => {
   return (
     <div id={"about"} className={"min-h-screen text-white"}>
-      <AboutSectionSegment
+      <AboutSegmentWrapper
         titleText={"About "}
         secondTitleText={"Me"}
         titleAnimationDelay={500}
         dividerAnimationDelay={0}
         threshold={0.2}
       >
-        <AboutMeSegment />
-      </AboutSectionSegment>
+        <AboutMe />
+      </AboutSegmentWrapper>
 
-      <AboutSectionSegment
+      <AboutSegmentWrapper
         titleText={"Technical "}
         secondTitleText={"Skills"}
         titleAnimationDelay={750}
         dividerAnimationDelay={250}
         threshold={0.5}
       >
-        <SkillsListSegment />
-      </AboutSectionSegment>
+        <SkillsList />
+      </AboutSegmentWrapper>
     </div>
   );
 };

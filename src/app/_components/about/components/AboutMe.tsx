@@ -3,7 +3,7 @@
 import React from "react";
 import { InView } from "react-intersection-observer";
 
-export default function AboutMeSegment() {
+export default function AboutMe() {
   return (
     <InView triggerOnce threshold={0.5}>
       {({ inView, ref }) => (
