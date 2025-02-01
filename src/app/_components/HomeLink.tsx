@@ -35,7 +35,7 @@ export const HomeLink = (props: HomeLinkProps) => {
       className={`text-white relative inline-block text-right font-bold uppercase 
                  text-4xl md:text-7xl lg:text-8xl 2xl:text-9xl fhd:text-xxl
                  before:wipe before:content-[attr(id)] before:background-size-width-[0] before:inline-block before:text-right 
-                 before:font-bold before:uppercase before:absolute before:top-0 before:left-0 
+                 before:font-bold before:uppercase before:absolute before:top-[-5px] before:left-0 
                  before:transition-background-size before:ease-slow-wipe before:duration-500 hover:before:background-size-width-[220%]`}
       id={label}
       // onClick={handleClick}

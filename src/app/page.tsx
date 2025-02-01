@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main>
       <PageTextBorder
-        texts={["Scale Models", "Front End Development", "Photography"]}
+        texts={["Drawing", "Front End Development", "Photography"]}
       />
       <ScrollingGridBackground />
       <div
