@@ -8,7 +8,7 @@ interface HomeLinkProps extends LinkProps {
   href: string;
 }
 
-export const HomeLink = (props: HomeLinkProps) => {
+export function HomeLink(props: HomeLinkProps) {
   const { href, label } = props;
 
   const handleClick = async (
@@ -44,4 +44,4 @@ export const HomeLink = (props: HomeLinkProps) => {
       {label}
     </a>
   );
-};
+}

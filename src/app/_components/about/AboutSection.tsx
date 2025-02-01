@@ -3,7 +3,7 @@ import AboutSegmentWrapper from "@/app/_components/about/components/AboutSegment
 import SkillsList from "@/app/_components/about/components/SkillsList";
 import AboutMe from "@/app/_components/about/components/AboutMe";
 
-const AboutSection = () => {
+export default function AboutSection() {
   return (
     <div id={"about"} className={"min-h-screen text-white"}>
       <AboutSegmentWrapper
@@ -27,6 +27,4 @@ const AboutSection = () => {
       </AboutSegmentWrapper>
     </div>
   );
-};
-
-export default AboutSection;
+}

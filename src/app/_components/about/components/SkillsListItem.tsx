@@ -12,16 +12,16 @@ import {
   RiReactjsFill,
 } from "react-icons/ri";
 
-interface SkillsListItemProps {
+type SkillsListItemProps = {
   inView: boolean;
   name: string;
   animationDelay: number;
-}
+};
 
 export default function SkillsListItem(props: SkillsListItemProps) {
   const { inView, name, animationDelay } = props;
 
-  const getIconByName = (name) => {
+  const getIconByName = (name: string) => {
     let icon;
 
     switch (name) {

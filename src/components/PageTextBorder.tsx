@@ -1,10 +1,10 @@
 import React from "react";
 
-interface PageTextBorderProps {
+type PageTextBorderProps = {
   texts: string[];
-}
+};
 
-export const PageTextBorder = (props: PageTextBorderProps) => {
+export function PageTextBorder(props: PageTextBorderProps) {
   const { texts } = props;
 
   return (
@@ -33,4 +33,4 @@ export const PageTextBorder = (props: PageTextBorderProps) => {
       </div>
     </>
   );
-};
+}

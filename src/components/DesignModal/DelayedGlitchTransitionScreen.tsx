@@ -3,15 +3,15 @@ import { GlitchText } from "@/components/DesignModal/GlitchText";
 import React, { useEffect, useState } from "react";
 import { sleep } from "@/utils";
 
-interface DelayedGlitchTransitionScreenProps {
+type DelayedGlitchTransitionScreenProps = {
   text: string;
   children: React.ReactNode;
   delay?: number;
-}
+};
 
-export const DelayedGlitchTransitionScreen = (
+export function DelayedGlitchTransitionScreen(
   props: DelayedGlitchTransitionScreenProps,
-) => {
+) {
   const { text, children, delay = 500 } = props;
   const [displayContent, setDisplayContent] = useState(false);
 
@@ -70,4 +70,4 @@ export const DelayedGlitchTransitionScreen = (
       </div>
     </div>
   );
-};
+}

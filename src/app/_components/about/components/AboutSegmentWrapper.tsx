@@ -3,14 +3,14 @@
 import { InView } from "react-intersection-observer";
 import React from "react";
 
-interface AboutSectionSegmentProps {
+type AboutSectionSegmentProps = {
   titleText: string;
   secondTitleText?: string;
   children: React.ReactNode;
   titleAnimationDelay: number;
   dividerAnimationDelay: number;
   threshold: number;
-}
+};
 
 export default function AboutSegmentWrapper({
   titleText,
@@ -18,7 +18,7 @@ export default function AboutSegmentWrapper({
   children,
   titleAnimationDelay,
   dividerAnimationDelay,
-  threshold
+  threshold,
 }: AboutSectionSegmentProps) {
   return (
     <InView triggerOnce threshold={threshold}>
@@ -71,9 +71,7 @@ export default function AboutSegmentWrapper({
               vectorEffect="non-scaling-stroke"
             />
           </svg>
-          <div
-            className={`mt-4 ${inView ? "opacity-1" : "opacity-0"}`}
-          >
+          <div className={`mt-4 ${inView ? "opacity-1" : "opacity-0"}`}>
             {children}
           </div>
         </div>

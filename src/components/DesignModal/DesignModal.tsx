@@ -2,12 +2,12 @@ import React from "react";
 import { DelayedGlitchTransitionScreen } from "@/components/DesignModal/DelayedGlitchTransitionScreen";
 import { IoMdClose } from "react-icons/io";
 
-interface DesignModalProps {
+type DesignModalProps = {
   isOpen: boolean;
   close: () => void;
-}
+};
 
-export const DesignModal = (props: DesignModalProps) => {
+export function DesignModal(props: DesignModalProps) {
   const { isOpen, close } = props;
 
   return (
@@ -84,8 +84,8 @@ export const DesignModal = (props: DesignModalProps) => {
               Valorant by Riot Games of which I took inspiration from their use
               of bold fonts and animations transitions.&nbsp;
               <span className={"font-semibold"}>
-                Please take a look at the many other works they&apos;ve done as they
-                are all visually appealing and dynamic.
+                Please take a look at the many other works they&apos;ve done as
+                they are all visually appealing and dynamic.
               </span>
             </div>
           </div>
@@ -99,4 +99,4 @@ export const DesignModal = (props: DesignModalProps) => {
       </DelayedGlitchTransitionScreen>
     )
   );
-};
+}

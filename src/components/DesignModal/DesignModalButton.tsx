@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { DesignModal } from "@/components/DesignModal/DesignModal";
 import { sleep } from "@/utils";
 
-export const DesignModalButton = () => {
+export function DesignModalButton() {
   const [showModal, setShowModal] = useState(false);
   const openModal = () => {
     setShowModal(!showModal);
@@ -20,7 +20,7 @@ export const DesignModalButton = () => {
     designLine2?.classList.add("animate-slide-design-line-2-exit");
     await sleep(1250);
     designModal?.classList.add("animate-fade-out");
-    await sleep(250)
+    await sleep(250);
 
     document.body.style.overflow = "auto";
     setShowModal(false);
@@ -37,4 +37,4 @@ export const DesignModalButton = () => {
       <DesignModal isOpen={showModal} close={closeModal} />
     </>
   );
-};
+}

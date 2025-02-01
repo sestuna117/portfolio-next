@@ -1,6 +1,6 @@
 import React from "react";
 
-export const GlitchText = () => {
+export function GlitchText() {
   return (
     <div
       data-text={"DESIGN"}
@@ -19,4 +19,4 @@ export const GlitchText = () => {
       <span className={"animate-flicker-away animation-delay-[2.7s]"}>N</span>
     </div>
   );
-};
+}
