@@ -5,7 +5,8 @@ import AboutMe from "@/app/_components/about/components/AboutMe";
 
 export default function AboutSection() {
   return (
-    <div id={"about"} className={"min-h-screen text-white"}>
+    //   "min-h-screen"
+    <section id={"about"} className={"text-white"}>
       <AboutSegmentWrapper
         titleText={"About "}
         secondTitleText={"Me"}
@@ -25,6 +26,6 @@ export default function AboutSection() {
       >
         <SkillsList />
       </AboutSegmentWrapper>
-    </div>
+    </section>
   );
 }

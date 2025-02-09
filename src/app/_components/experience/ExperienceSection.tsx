@@ -6,7 +6,7 @@ import WorkSelector from "@/app/_components/experience/components/WorkSelector";
 
 export default function ExperienceSection() {
   return (
-    <div id={"experience"} className={"min-h-screen text-white"}>
+    <section id={"experience"} className={"text-white"}>
       <InView triggerOnce threshold={1}>
         {({ inView, ref }) => (
           <div ref={ref}>
@@ -45,10 +45,12 @@ export default function ExperienceSection() {
                 />
               </svg>
             </div>
-            <WorkSelector />
+            <div className={`mt-4 ${inView ? "opacity-1" : "opacity-0"}`}>
+              <WorkSelector />
+            </div>
           </div>
         )}
       </InView>
-    </div>
+    </section>
   );
 }

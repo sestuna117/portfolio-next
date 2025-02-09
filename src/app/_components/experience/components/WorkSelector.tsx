@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Experience } from "@/types/Experience";
-import JobSelector from "@/app/_components/experience/components/JobSelector";
+import WorkSelectOption from "@/app/_components/experience/components/WorkSelectOption";
+import WorkDescriptionCard from "@/app/_components/experience/components/WorkDescriptionCard";
 
 const EXPERIENCES: Experience[] = [
   {
@@ -26,19 +27,19 @@ const EXPERIENCES: Experience[] = [
 ];
 
 export default function WorkSelector() {
-  const [selectedJob, setSelectedJob] = useState(EXPERIENCES[0]);
+  const [selectedExp, setSelectedExp] = useState(EXPERIENCES[0]);
 
-  const handleChangeJob = (job: Experience) => {
-    setSelectedJob(job);
+  const handleChangeExperience = (experience: Experience) => {
+    setSelectedExp(experience);
   };
 
   return (
     <div className={"flex mt-10"}>
-      <JobSelector
+      <WorkSelectOption
         experiences={EXPERIENCES}
-        handleSelectJob={handleChangeJob}
+        handleSelectExperience={handleChangeExperience}
       />
-      <div>description</div>
+      <WorkDescriptionCard selectedExp={selectedExp} />
     </div>
   );
 }
