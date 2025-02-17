@@ -12,25 +12,28 @@ export default function WorkSelectOption(props: JobSelectorProps) {
   return (
     <InView triggerOnce threshold={0.5}>
       {({ inView, ref }) => (
-        <div ref={ref}>
-          <div
-            className={
-              inView
-                ? "mb-10 opacity-0 animate-slide-text-up-show animation-delay-[1250ms]"
-                : "opacity-0"
-            }
-          >
-            <div>
-              {experiences.map((experience) => (
-                <button
-                  onClick={() => handleSelectExperience(experience)}
-                  key={experience.jobTitle}
-                >
-                  <div>{experience.jobTitle}</div>
-                  <div>{experience.company}</div>
-                </button>
-              ))}
-            </div>
+        <div
+          ref={ref}
+          className={
+            inView
+              ? "mb-10 opacity-0 animate-slide-text-right-show animation-delay-[750ms]"
+              : "opacity-0"
+          }
+        >
+          <div>
+            {experiences.map((experience) => (
+              <button
+                className={
+                  "overflow-hidden border-[1px] border-solid relative p-4 min-h-[100px] max-w-[300px] mb-4 duration-200 after:button-wiper hover:after:left-[120%] ease-fast-wipe hover:border-heliotrope active:bg-heavy-metal"
+                }
+                onClick={() => handleSelectExperience(experience)}
+                key={experience.jobTitle}
+              >
+                <div className={"z-20"}>
+                  {`${experience.jobTitle} - ${experience.company}`}
+                </div>
+              </button>
+            ))}
           </div>
         </div>
       )}

@@ -49,6 +49,7 @@ const config: Config = {
       },
       transitionTimingFunction: {
         "slow-wipe": "cubic-bezier(0.98, 0.01, 0.15, 0.98)",
+        "fast-wipe": "cubic-bezier(0.19, 1, 0.22, 1)",
       },
       backgroundImage: {
         "black-bars-vertical":
@@ -82,6 +83,7 @@ const config: Config = {
         "squish-vertical": "squish-vertical 0.15s forwards",
         "slide-heading-up-right": "slide-heading-up-right 0.3s forwards",
         "slide-text-up-right": "slide-text-up-right 0.45s forwards",
+        "slide-text-right-show": "slide-text-right-show 0.3s forwards",
         "slide-text-up-show": "slide-text-up-show 0.3s forwards",
         "slide-up-body-line": "slide-up-body-line 0.5s forwards",
         "scrolling-grid-bg": "scrolling-grid-bg 30s linear infinite",
@@ -391,6 +393,16 @@ const config: Config = {
             opacity: "1",
           },
         },
+        "slide-text-right-show": {
+          "0%": {
+            transform: "translateX(-20px)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
         "slide-up-body-line": {
           "0%": {
             transform: "translateY(100vh)",
@@ -520,6 +532,19 @@ const config: Config = {
         },
         ".wiper-on-a": {
           transform: "translateY(-100%) !important",
+        },
+        ".button-wiper": {
+          background: "#a57ffb",
+          content: `""`,
+          opacity: "0.2",
+          position: "absolute",
+          top: "-50px",
+          left: "-100px",
+          height: "205px",
+          width: "50px",
+          transform: "rotate(35deg)",
+          transition: "all 750ms cubic-bezier(0.19, 1, 0.22, 1)",
+          "z-index": "-10",
         },
       });
     }),
