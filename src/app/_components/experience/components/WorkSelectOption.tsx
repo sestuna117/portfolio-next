@@ -10,7 +10,7 @@ type JobSelectorProps = {
 export default function WorkSelectOption(props: JobSelectorProps) {
   const { experiences, handleSelectExperience } = props;
   return (
-    <InView triggerOnce threshold={0.5}>
+    <InView triggerOnce threshold={1}>
       {({ inView, ref }) => (
         <div
           ref={ref}
@@ -30,7 +30,10 @@ export default function WorkSelectOption(props: JobSelectorProps) {
                 key={experience.jobTitle}
               >
                 <div className={"z-20"}>
-                  {`${experience.jobTitle} - ${experience.company}`}
+                  {`${experience.jobTitle} - `}
+                  <span className={"text-heliotrope"}>
+                    {experience.company}
+                  </span>
                 </div>
               </button>
             ))}

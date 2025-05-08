@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Experience } from "@/types/Experience";
 import WorkSelectOption from "@/app/_components/experience/components/WorkSelectOption";
 import WorkDescriptionCard from "@/app/_components/experience/components/WorkDescriptionCard";
+import { sleep } from "@/utils";
 
 const EXPERIENCES: Experience[] = [
   {
@@ -29,12 +30,18 @@ const EXPERIENCES: Experience[] = [
 export default function WorkSelector() {
   const [selectedExp, setSelectedExp] = useState(EXPERIENCES[0]);
 
-  const handleChangeExperience = (experience: Experience) => {
+  const handleChangeExperience = async (experience: Experience) => {
+    const designModal = document.getElementById("work-desc-card");
+    designModal?.classList.add("animate-squish-vertical");
+    await sleep(1000);
     setSelectedExp(experience);
+    designModal?.classList.remove("animate-squish-vertical");
+    designModal?.classList.add("animate-expand-vertical");
+    await sleep(250);
   };
 
   return (
-    <div className={"flex mt-10"}>
+    <div className={"flex mt-10 px-8"}>
       <WorkSelectOption
         experiences={EXPERIENCES}
         handleSelectExperience={handleChangeExperience}

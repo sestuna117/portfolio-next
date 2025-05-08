@@ -81,9 +81,11 @@ const config: Config = {
         "slide-design-line-1-exit": "slide-design-line-1-exit 1.25s forwards",
         "slide-design-line-2-exit": "slide-design-line-2-exit 1.25s forwards",
         "squish-vertical": "squish-vertical 0.15s forwards",
+        "expand-vertical": "expand-vertical 0.15s forwards",
         "slide-heading-up-right": "slide-heading-up-right 0.3s forwards",
         "slide-text-up-right": "slide-text-up-right 0.45s forwards",
         "slide-text-right-show": "slide-text-right-show 0.3s forwards",
+        "slide-text-left-show": "slide-text-left-show 0.3s forwards",
         "slide-text-up-show": "slide-text-up-show 0.3s forwards",
         "slide-up-body-line": "slide-up-body-line 0.5s forwards",
         "scrolling-grid-bg": "scrolling-grid-bg 30s linear infinite",
@@ -351,6 +353,14 @@ const config: Config = {
             transform: "scaleY(0)",
           },
         },
+        "expand-vertical": {
+          "0%": {
+            transform: "scaleY(0)",
+          },
+          "100%": {
+            transform: "scaleY(1)",
+          },
+        },
         "slide-heading-up-right": {
           "0%": {
             transform: "translate(30vw, 20px)",
@@ -396,6 +406,16 @@ const config: Config = {
         "slide-text-right-show": {
           "0%": {
             transform: "translateX(-20px)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+        "slide-text-left-show": {
+          "0%": {
+            transform: "translateX(20px)",
             opacity: "0",
           },
           "100%": {
